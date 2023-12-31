@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace eBelge_DataSyncHub.Model.Projects
 {
-    internal class ELedgerDeclaration
+    public class ELedgerDeclaration
     {
+        public List<ELedgerDeclarationItems> items { get; set; }
+        public class ELedgerDeclarationItems
+        {
+            public string description { get; set; }
+            public string date { get; set; }
+        }
+
     }
 }

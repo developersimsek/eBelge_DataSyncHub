@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace eBelge_DataSyncHub.Model.Projects
 {
-    internal class HtmlValueListsOut
+    public class HtmlValueListsOut
     {
+        public List<string> TitleList { get; set; }
+        public List<string> ContextList { get; set; }
+        public List<string> HreftList { get; set; }
     }
 }

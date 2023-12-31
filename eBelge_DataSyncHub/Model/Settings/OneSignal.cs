@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace eBelge_DataSyncHub.Model.Settings
+﻿namespace eBelge_DataSyncHub.Model.Settings
 {
-    internal class OneSignal
+    public class OneSignal
     {
+        public string uri { get; set; }
+        public string apiKey { get; set; }
+        public string appId { get; set; }
     }
 }

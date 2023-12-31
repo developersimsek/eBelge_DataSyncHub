@@ -1,3 +1,34 @@
 {
-
+  "Settings": {
+    "Projets": {
+      "e-Document": {
+        "Uri": "https://ebelge.gib.gov.tr/duyurular.html",
+        "TitlePath": "//div[@class='component-content']/a/strong",
+        "ContextPath": "//div[@class='component-content']/p",
+        "FirebasePath": "EDocument"
+      },
+      "e-Ledger": {
+        "Uri": "https://www.edefter.gov.tr/duyurular.html",
+        "TitlePath": "//div[@class='component-content']/a/strong",
+        "ContextPath": "//div[@class='component-content']/p",
+        "FirebasePath": "ELedger"
+      },
+      "e-LedgerDeclaration": {
+        "Uri": "https://www.defterbeyan.gov.tr/plugins/announcement?posturl=Gib_Plugins_Announcements.Home.GetFilteredAnnouncement.Index_618",
+        "FirebasePath": "ELedgerDeclaration"
+      },
+      "paymentRecorder": {
+        "Uri": "https://ynokc.gib.gov.tr/Home/DuyuruArsiv",
+        "TitlePath": "//div[@class='post-content']/h5",
+        "ContextPath": "//div[@class='post-text']/h3/a",
+        "FirebasePath": "PaymentRecorder"
+      }
+    },
+    "oneSignal": {
+      "uri": "https://onesignal.com/api/v1/notifications",
+      "apiKey": "xxx",
+      "appId": "xxx"
+    },
+    "fireBaseUri": "https://xxx"
+  }
 }

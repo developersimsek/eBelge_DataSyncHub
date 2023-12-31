@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using static eBelge_DataSyncHub.Model.Settings.Projects.SettingProjects;
 
 namespace eBelge_DataSyncHub.Model.Settings
 {
-    internal class Project_Setting
+    public class Project_Setting
     {
+        public class Setting
+        {
+            public Settings Settings { get; set; }
+        }
+        public class Settings
+        {
+            public Projets Projets { get; set; }
+            public OneSignal oneSignal { get; set; }
+            public string fireBaseUri { get; set; }
+        }
     }
 }
