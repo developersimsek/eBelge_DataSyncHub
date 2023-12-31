@@ -53,7 +53,6 @@ namespace eBelge_DataSyncHub
             catch (Exception ex)
             {
                 glb_Func.WriteLog(ex.Message, EventLogEntryType.Error);
-                throw;
             }
         }
 
