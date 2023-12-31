@@ -54,6 +54,12 @@ OneSignal > appId
 fireBaseUri
 ```
 
+<p>7. After the project is compiled.</p>
+
+```
+Start command prompt as administrator and run this command. sc create eBelge_DataSyncHub binPath= "..X\eBelge_DataSyncHub.exe"
+```
+
   
   
 <h2>💻 Built with</h2>
