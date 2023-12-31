@@ -15,6 +15,7 @@ Here're some of the project's best features:
 *   https://ynokc.gib.gov.tr/Home/DuyuruArsiv sayfasındaki güncel duyuruları tarar.
 *   OneSignal Push Notification
 *   Firebase Database
+*   Hata Yönetimi (Olay Görüntüleyicisi)
 
 <h2>🛠️ Installation Steps:</h2>
 
