@@ -1,8 +1,7 @@
 <h1 align="center" id="title">eBelge_DataSyncHub</h1>
 
 <p id="description">
-  * Windows service projesidir.
-  * Bu proje e-Belge, e-Defter, e-Beyanname ve OKC sitelerindeki duyuruları tarar. Eğer güncel bir duyuru bulunursa bu bilgiyi Firebase'e kaydeder ve aynı zamanda One Signal aracılığıyla bildirim gönderir. Otomatik olarak her saat başı yeniden çalışır.</p>
+  * Bu proje e-Belge, e-Defter, e-Beyanname ve OKC sitelerindeki duyuruları tarar. Eğer güncel bir duyuru bulunursa bu bilgiyi Firebase'e kaydeder ve aynı zamanda One Signal aracılığıyla bildirim gönderir. Otomatik olarak her saat başı yeniden çalışan Windows service projesidir.</p>
 
   
   
