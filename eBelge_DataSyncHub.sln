@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBelge_DataSyncHub", "eBelge_DataSyncHub\eBelge_DataSyncHub.csproj", "{1CA572C0-EC27-4851-9691-842575CA7ABC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CA572C0-EC27-4851-9691-842575CA7ABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA572C0-EC27-4851-9691-842575CA7ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA572C0-EC27-4851-9691-842575CA7ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA572C0-EC27-4851-9691-842575CA7ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36A1A14A-BF2F-498D-B871-598E0E7C7A01}
+	EndGlobalSection
+EndGlobal
