@@ -36,19 +36,19 @@ HtmlAgilityPack
 Newtonsoft.Json
 ```
 
-<p>4. Settings.json</p>
+<p>4. Edit Settings.json</p>
 
 ```
 oneSignal > apiKey
 ```
 
-<p>5. Settings.json</p>
+<p>5. Edit Settings.json</p>
 
 ```
 OneSignal > appId
 ```
 
-<p>6. Settings.json</p>
+<p>6. Edit Settings.json</p>
 
 ```
 fireBaseUri
