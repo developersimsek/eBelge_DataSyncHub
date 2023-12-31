@@ -18,19 +18,37 @@ Here're some of the project's best features:
 
 <h2>🛠️ Installation Steps:</h2>
 
-<p>1. Settings.json</p>
+<p>1. Install NuGet Package</p>
+
+```
+FirebaseDatabase.net
+```
+
+<p>2. Install NuGet Package</p>
+
+```
+HtmlAgilityPack
+```
+
+<p>3. Install NuGet Package</p>
+
+```
+Newtonsoft.Json
+```
+
+<p>4. Settings.json</p>
 
 ```
 oneSignal > apiKey
 ```
 
-<p>2. Settings.json</p>
+<p>5. Settings.json</p>
 
 ```
 OneSignal > appId
 ```
 
-<p>3. Settings.json</p>
+<p>6. Settings.json</p>
 
 ```
 fireBaseUri
