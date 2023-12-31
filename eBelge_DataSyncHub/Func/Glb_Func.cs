@@ -6,6 +6,7 @@ using HtmlAgilityPack;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net.Http;
 using System.Net.NetworkInformation;
@@ -363,6 +364,31 @@ namespace eBelge_DataSyncHub.Func
         }
 
         #endregion
+
+        #endregion
+
+        #region Log
+
+        /// <summary>
+        /// Belirtilen mesajı ve olay türünü olay günlüğüne yazar.
+        /// </summary>
+        /// <param name="logMessage">Olay günlüğüne yazılacak mesaj.</param>
+        /// <param name="type">Olayın türü (Information, Error, Warning vb.).</param>
+        public void WriteLog(string logMessage, EventLogEntryType type)
+        {
+            EventLog eventLog = new EventLog();
+
+            try
+            {
+                eventLog.Source = "DataSyncServices";
+                eventLog.WriteEntry(logMessage, type);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
 
         #endregion
 

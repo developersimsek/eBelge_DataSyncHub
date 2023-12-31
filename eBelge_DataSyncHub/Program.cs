@@ -17,7 +17,7 @@ namespace eBelge_DataSyncHub
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new Service1()
+                new DataSyncServices()
             };
             ServiceBase.Run(ServicesToRun);
         }
