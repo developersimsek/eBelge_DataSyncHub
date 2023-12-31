@@ -1,6 +1,6 @@
 <h1 align="center" id="title">eBelge_DataSyncHub</h1>
 
-<p id="description">Bu proje e-Belge e-Defter e-Beyanname ve OKC sitelerindeki duyuruları tarar. Eğer güncel bir duyuru bulunursa bu bilgiyi Firebase'e kaydeder ve aynı zamanda One Signal aracılığıyla bildirim gönderir. Otomatik olarak her saat başı yeniden çalışır.</p>
+<p id="description">Bu proje e-Belge, e-Defter, e-Beyanname ve OKC sitelerindeki duyuruları tarar. Eğer güncel bir duyuru bulunursa bu bilgiyi Firebase'e kaydeder ve aynı zamanda One Signal aracılığıyla bildirim gönderir. Otomatik olarak her saat başı yeniden çalışır.</p>
 
   
   
@@ -11,6 +11,7 @@ Here're some of the project's best features:
 *   https://ebelge.gib.gov.tr/duyurular.html sayfasındaki güncel duyuruları tarar.
 *   https://www.edefter.gov.tr/duyurular.html sayfasındaki güncel duyuruları tarar.
 *   https://www.defterbeyan.gov.tr/tr/duyurular sayfasındaki güncel duyuruları tarar.
+*   https://ynokc.gib.gov.tr/Home/DuyuruArsiv sayfasındaki güncel duyuruları tarar.
 *   OneSignal Push Notification
 *   Firebase Database
 
