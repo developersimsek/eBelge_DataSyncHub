@@ -4,6 +4,7 @@ using eBelge_DataSyncHub.Func;
 using System;
 using System.Diagnostics;
 using System.ServiceProcess;
+using System.Threading;
 using System.Threading.Tasks;
 
 #endregion
@@ -14,12 +15,7 @@ namespace eBelge_DataSyncHub
     {
         #region Region
 
-        Glb_Func glb_Func;
-        e_Document_Func e_Document_Func;
-        e_Ledger_Func e_Ledger_Func;
-        paymentRecorder paymentRecorder;
-        e_LedgerDeclaration_Func e_LedgerDeclaration_Func;
-        private System.Threading.Timer timer;
+        private CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
 
         #endregion
 
@@ -27,12 +23,6 @@ namespace eBelge_DataSyncHub
 
         public DataSyncServices()
         {
-            glb_Func = new Glb_Func();
-            e_Document_Func = new e_Document_Func();
-            e_Ledger_Func = new e_Ledger_Func();
-            e_LedgerDeclaration_Func = new e_LedgerDeclaration_Func();
-            paymentRecorder = new paymentRecorder();
-
             InitializeComponent();
         }
 
@@ -42,6 +32,7 @@ namespace eBelge_DataSyncHub
 
         protected override async void OnStart(string[] args)
         {
+            Glb_Func glb_Func = new Glb_Func();
 
             try
             {
@@ -49,12 +40,15 @@ namespace eBelge_DataSyncHub
 
                 await Transactions();
 
-                timer = new System.Threading.Timer(
-                    async (e) => await Transactions(),
-                    null,
-                    TimeSpan.Zero,
-                    TimeSpan.FromHours(1)
-                );
+                Task mainTask = Task.Run(async () =>
+                {
+                    while (!cancellationTokenSource.Token.IsCancellationRequested)
+                    {
+                        await Task.Delay(TimeSpan.FromHours(1));
+
+                        await Transactions();
+                    }
+                }, cancellationTokenSource.Token);
             }
             catch (Exception ex)
             {
@@ -69,10 +63,12 @@ namespace eBelge_DataSyncHub
 
         protected override void OnStop()
         {
+            Glb_Func glb_Func = new Glb_Func();
+
             try
             {
                 glb_Func.WriteLog("Servis durduruldu.", EventLogEntryType.Information);
-
+                cancellationTokenSource.Cancel(); 
             }
             catch (Exception ex)
             {
@@ -86,6 +82,12 @@ namespace eBelge_DataSyncHub
         #region Transactions
         private async Task Transactions()
         {
+            Glb_Func glb_Func = new Glb_Func();
+            e_Document_Func e_Document_Func = new e_Document_Func();
+            e_Ledger_Func e_Ledger_Func = new e_Ledger_Func();
+            paymentRecorder paymentRecorder = new paymentRecorder();
+            e_LedgerDeclaration_Func e_LedgerDeclaration_Func = new e_LedgerDeclaration_Func();
+
             try
             {
                 await e_Document_Func.saveAndPushNotification();

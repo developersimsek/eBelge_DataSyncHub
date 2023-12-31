@@ -26,7 +26,6 @@ namespace eBelge_DataSyncHub.Func
         OneSignal oneSignal_Func;
         Service.Firebase firebase_Func;
         SettingProperty settingELedgerDeclaration;
-        List<ELedgerDeclaration> eledgerDeclarationList;
         List<ELedgerDeclarationItems> eLedgerDeclarationItems;
         List<FirebaseProperty> currentList;
         Dictionary<string, FirebaseProperty> saveDataList;
@@ -40,7 +39,6 @@ namespace eBelge_DataSyncHub.Func
             glb_Func = new Glb_Func();
             oneSignal_Func = new OneSignal();
             firebase_Func = new Service.Firebase();
-            eledgerDeclarationList = new List<ELedgerDeclaration>();
             currentList = new List<FirebaseProperty>();
             saveDataList = new Dictionary<string, FirebaseProperty>();
             eLedgerDeclarationItems = new List<ELedgerDeclarationItems>();

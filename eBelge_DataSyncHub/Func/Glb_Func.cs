@@ -62,7 +62,6 @@ namespace eBelge_DataSyncHub.Func
         /// <returns>HTML düğüm koleksiyonu</returns>
         public async Task<HtmlNodeCollection> getHtmlNodes(HttpResponseMessage responseMessage, string elementSelector)
         {
-            string content;
             HtmlDocument htmlDoc = new HtmlDocument();
             HtmlNodeCollection htmlNodesCol;
 
@@ -197,12 +196,13 @@ namespace eBelge_DataSyncHub.Func
         /// <returns>Ayarlar</returns>
         public Setting getSetting()
         {
-            string jsonRead, settigsJsonPath = "settings.json";
+            string jsonRead, settingsJsonPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "settings.json");
+
             Setting project_Setting = new Setting();
 
             try
             {
-                jsonRead = File.ReadAllText(settigsJsonPath);
+                jsonRead = File.ReadAllText(settingsJsonPath);
 
                 project_Setting = JsonConvert.DeserializeObject<Setting>(jsonRead);
 

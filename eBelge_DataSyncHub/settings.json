@@ -26,9 +26,9 @@
     },
     "oneSignal": {
       "uri": "https://onesignal.com/api/v1/notifications",
-      "apiKey": "xxx",
-      "appId": "xxx"
+      "apiKey": "XXX",
+      "appId": "XXX"
     },
-    "fireBaseUri": "https://xxx"
+    "fireBaseUri": "https://xxx/"
   }
 }
