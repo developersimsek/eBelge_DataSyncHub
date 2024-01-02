@@ -5,6 +5,7 @@ using eBelge_DataSyncHub.Model.Settings.Projects;
 using eBelge_DataSyncHub.Service;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
@@ -123,6 +124,8 @@ namespace eBelge_DataSyncHub.Func
 
                 if (currentList.Count <= 0 || (htmlValueListsOut.ContextList.Count > 0 && currentList[0].Aciklama != htmlValueListsOut.ContextList[0]))
                 {
+                    glb_Func.WriteLog("eLedger getListAndControl işleminde yeni duyuru bulundu. Firebase'e kaydedilip bildirim gönderilecek.", EventLogEntryType.Information);
+
                     for (int i = 0; i < 20; i++)
                     {
                         FirebaseProperty property = new FirebaseProperty
@@ -139,6 +142,7 @@ namespace eBelge_DataSyncHub.Func
                 }
                 else
                 {
+                    glb_Func.WriteLog("eLedger getListAndControl işleminde yeni duyuru bulunamadı.", EventLogEntryType.Information);
                     return false;
                 }
             }

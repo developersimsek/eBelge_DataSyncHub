@@ -45,6 +45,7 @@ namespace eBelge_DataSyncHub
                     while (!cancellationTokenSource.Token.IsCancellationRequested)
                     {
                         await Task.Delay(TimeSpan.FromHours(1));
+                        glb_Func.WriteLog("Tarama tekrar başlatıldı.", EventLogEntryType.Information);
 
                         await Transactions();
                     }
@@ -67,7 +68,7 @@ namespace eBelge_DataSyncHub
             try
             {
                 glb_Func.WriteLog("Servis durduruldu.", EventLogEntryType.Information);
-                cancellationTokenSource.Cancel(); 
+                cancellationTokenSource.Cancel();
             }
             catch (Exception ex)
             {
