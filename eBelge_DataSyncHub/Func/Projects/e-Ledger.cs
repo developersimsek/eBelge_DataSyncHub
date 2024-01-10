@@ -130,9 +130,9 @@ namespace eBelge_DataSyncHub.Func
                     {
                         FirebaseProperty property = new FirebaseProperty
                         {
-                            Aciklama = htmlValueListsOut.ContextList[i],
-                            Date = htmlValueListsOut.TitleList[i],
-                            Link = htmlValueListsOut.HreftList[i]
+                            Aciklama = !string.IsNullOrEmpty(htmlValueListsOut.ContextList[i]) ? htmlValueListsOut.ContextList[i] : "",
+                            Date = !string.IsNullOrEmpty(htmlValueListsOut.TitleList[i]) ? htmlValueListsOut.TitleList[i] : "",
+                            Link = !string.IsNullOrEmpty(htmlValueListsOut.HreftList[i]) ? htmlValueListsOut.HreftList[i] : ""
                         };
 
                         saveDataList.Add(Ext_String.GenerateStringKey(), property);

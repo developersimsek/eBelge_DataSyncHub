@@ -147,8 +147,8 @@ namespace eBelge_DataSyncHub.Func
                     {
                         FirebaseProperty property = new FirebaseProperty
                         {
-                            Aciklama = eLedgerDeclarationItems[i].description,
-                            Date = eLedgerDeclarationItems[i].date.ConvertDateFormat(),
+                            Aciklama = !string.IsNullOrEmpty(eLedgerDeclarationItems[i].description) ? eLedgerDeclarationItems[i].description : "",
+                            Date = !string.IsNullOrEmpty(eLedgerDeclarationItems[i].date) ? eLedgerDeclarationItems[i].date.ConvertDateFormat() : "",
                             Link = ""
                         };
 
